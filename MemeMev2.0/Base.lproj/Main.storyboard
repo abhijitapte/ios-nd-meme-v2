@@ -117,50 +117,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-3C-oyB">
-                                <rect key="frame" x="87" y="564" width="240" height="219"/>
+                                <rect key="frame" x="87" y="118" width="240" height="219"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Bwg-i9-cNY"/>
                                     <constraint firstAttribute="height" constant="219" id="p2o-rO-5Qo"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOY-vu-s7h" userLabel="Top Label">
-                                <rect key="frame" x="170" y="440" width="74" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOY-vu-s7h" userLabel="Top Label">
+                                <rect key="frame" x="170" y="97" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7F-l5-AFE" userLabel="Bottom Label">
-                                <rect key="frame" x="156.5" y="440.5" width="101.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7F-l5-AFE" userLabel="Bottom Label">
+                                <rect key="frame" x="156.5" y="337" width="101.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXt-f4-iMX">
-                                <rect key="frame" x="87" y="76" width="240" height="219"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="E2E-Dm-HZD"/>
-                                    <constraint firstAttribute="height" constant="219" id="adB-hz-aaA"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vaa-LT-cn4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="V7F-l5-AFE" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="0eR-GI-s9M"/>
-                            <constraint firstItem="VOY-vu-s7h" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="4WH-Gf-eCB"/>
-                            <constraint firstItem="VOY-vu-s7h" firstAttribute="centerY" secondItem="vaa-LT-cn4" secondAttribute="centerY" id="Ceb-a3-kDe" userLabel="Top Label.centerY = Safe Area.centerY - 30"/>
-                            <constraint firstItem="XXt-f4-iMX" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="DNH-nr-wVB"/>
-                            <constraint firstItem="vaa-LT-cn4" firstAttribute="bottom" secondItem="4kW-3C-oyB" secondAttribute="bottom" constant="30" id="KIG-ih-fyB"/>
-                            <constraint firstItem="4kW-3C-oyB" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="dfi-RH-B7j"/>
-                            <constraint firstItem="XXt-f4-iMX" firstAttribute="top" secondItem="vaa-LT-cn4" secondAttribute="top" constant="30" id="sHN-w1-WXB"/>
-                            <constraint firstItem="V7F-l5-AFE" firstAttribute="centerY" secondItem="vaa-LT-cn4" secondAttribute="centerY" id="v3k-oy-5VN" userLabel="Bottom Label.centerY = Safe Area.centerY + 30"/>
+                            <constraint firstItem="4kW-3C-oyB" firstAttribute="top" secondItem="VOY-vu-s7h" secondAttribute="bottom" id="1kp-VY-GpI"/>
+                            <constraint firstItem="V7F-l5-AFE" firstAttribute="top" secondItem="4kW-3C-oyB" secondAttribute="bottom" id="KVa-ao-gP8"/>
+                            <constraint firstItem="VOY-vu-s7h" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="QLF-rI-Fpj"/>
+                            <constraint firstItem="VOY-vu-s7h" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="d8C-js-5vh"/>
+                            <constraint firstItem="V7F-l5-AFE" firstAttribute="width" secondItem="vaa-LT-cn4" secondAttribute="width" multiplier="0.245169" id="dBk-hY-16Z"/>
+                            <constraint firstItem="VOY-vu-s7h" firstAttribute="top" secondItem="vaa-LT-cn4" secondAttribute="top" constant="9" id="hcZ-ER-PxD"/>
+                            <constraint firstItem="4kW-3C-oyB" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="mnV-IM-adr"/>
+                            <constraint firstItem="VOY-vu-s7h" firstAttribute="top" secondItem="vaa-LT-cn4" secondAttribute="top" constant="9" id="nzu-b3-dn0"/>
+                            <constraint firstItem="VOY-vu-s7h" firstAttribute="width" secondItem="vaa-LT-cn4" secondAttribute="width" multiplier="0.178744" id="ocM-Df-TeV"/>
+                            <constraint firstItem="V7F-l5-AFE" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="u1g-Mb-nTp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xdA-bJ-EZH"/>
                     <connections>
                         <outlet property="bottomLabel" destination="V7F-l5-AFE" id="mgp-UR-RmW"/>
                         <outlet property="memedImage" destination="4kW-3C-oyB" id="MkL-8O-O4C"/>
-                        <outlet property="originalImage" destination="XXt-f4-iMX" id="UsM-E1-8SC"/>
                         <outlet property="topLabel" destination="VOY-vu-s7h" id="Wnb-Jn-Rim"/>
                     </connections>
                 </viewController>
@@ -211,7 +205,7 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GI4-Gc-dFK">
                                             <rect key="frame" x="9" y="26" width="141" height="128"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vN-rd-E29">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vN-rd-E29">
                                             <rect key="frame" x="58.5" y="151" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
