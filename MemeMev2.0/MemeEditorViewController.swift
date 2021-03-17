@@ -16,6 +16,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 	@IBOutlet weak var bottomText: UITextField!
 	@IBOutlet weak var shareButton: UIBarButtonItem!
 	@IBOutlet weak var cameraButton: UIBarButtonItem!
+	@IBOutlet weak var navigationBar: UINavigationBar!
+	@IBOutlet weak var toolbar: UIToolbar!
 	
 	// MARK: Model
 	var memedImage: UIImage!
@@ -70,8 +72,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 	}
 	
 	func setToolbarVisibility(hide flag: Bool) {
-		self.navigationController?.setNavigationBarHidden(flag, animated: false)
-		self.navigationController?.setToolbarHidden(flag, animated: false)
+		navigationBar.isHidden = flag
+		toolbar.isHidden = flag
 	}
 		
 	func generateMemedImage() -> UIImage {
@@ -79,8 +81,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 		setToolbarVisibility(hide: true)
 
 		// Render view to an image
-		UIGraphicsBeginImageContext(self.view.frame.size)
-		view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+		UIGraphicsBeginImageContext(view.frame.size)
+		view.drawHierarchy(in: view.frame, afterScreenUpdates: true)
 		let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
 		UIGraphicsEndImageContext()
 		
@@ -99,7 +101,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 	// MARK: View controller methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+		cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

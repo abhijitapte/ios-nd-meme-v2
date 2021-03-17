@@ -18,25 +18,25 @@ class SentMemesTableViewController: UITableViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		self.navigationItem.title = "Sent Memes"
+		navigationItem.title = "Sent Memes"
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
-		self.tableView.reloadData()
+		tableView.reloadData()
 	}
 	
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.memes.count
+        return memes.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "SentMemesTableViewCell")!
-		let meme = self.memes[indexPath.row]
+		let meme = memes[indexPath.row]
 		cell.textLabel?.text = meme.topText + "..." + meme.bottomText
 		cell.imageView?.image = meme.memedImage
 		
@@ -46,7 +46,7 @@ class SentMemesTableViewController: UITableViewController {
 	// MARK: - Collection view delegate
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		self.detailRowIndex = (indexPath as NSIndexPath).row
+		detailRowIndex = (indexPath as NSIndexPath).row
 		performSegue(withIdentifier: "ShowSentMemeDetailFromTableViewCell", sender: self)
 		
 	}
@@ -57,8 +57,8 @@ class SentMemesTableViewController: UITableViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "ShowSentMemeDetailFromTableViewCell" {
 			let detailController = segue.destination as! MemeDetailViewController
-			detailController.meme = self.memes[self.detailRowIndex!]
-			self.detailRowIndex = nil
+			detailController.meme = memes[detailRowIndex!]
+			detailRowIndex = nil
 		}
 	}
 

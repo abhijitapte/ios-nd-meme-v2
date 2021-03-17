@@ -100,7 +100,9 @@
                         <outlet property="bottomText" destination="E8I-ph-PgN" id="FjN-lM-asU"/>
                         <outlet property="cameraButton" destination="jKl-oj-YTR" id="4QD-lg-kbf"/>
                         <outlet property="imageView" destination="pv9-O2-sPa" id="nvP-eo-aPH"/>
+                        <outlet property="navigationBar" destination="6fa-6n-bH8" id="vp9-oW-M89"/>
                         <outlet property="shareButton" destination="7vg-w9-7GC" id="erd-aT-N41"/>
+                        <outlet property="toolbar" destination="tJO-qk-WhI" id="eVj-GK-Zb5"/>
                         <outlet property="topText" destination="Qg2-TX-uzA" id="zFb-DD-Avu"/>
                     </connections>
                 </viewController>
@@ -116,46 +118,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-3C-oyB">
-                                <rect key="frame" x="87" y="118" width="240" height="219"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Bwg-i9-cNY"/>
-                                    <constraint firstAttribute="height" constant="219" id="p2o-rO-5Qo"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-3C-oyB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOY-vu-s7h" userLabel="Top Label">
-                                <rect key="frame" x="170" y="97" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7F-l5-AFE" userLabel="Bottom Label">
-                                <rect key="frame" x="156.5" y="337" width="101.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vaa-LT-cn4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4kW-3C-oyB" firstAttribute="top" secondItem="VOY-vu-s7h" secondAttribute="bottom" id="1kp-VY-GpI"/>
-                            <constraint firstItem="V7F-l5-AFE" firstAttribute="top" secondItem="4kW-3C-oyB" secondAttribute="bottom" id="KVa-ao-gP8"/>
-                            <constraint firstItem="VOY-vu-s7h" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="QLF-rI-Fpj"/>
-                            <constraint firstItem="VOY-vu-s7h" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="d8C-js-5vh"/>
-                            <constraint firstItem="V7F-l5-AFE" firstAttribute="width" secondItem="vaa-LT-cn4" secondAttribute="width" multiplier="0.245169" id="dBk-hY-16Z"/>
-                            <constraint firstItem="VOY-vu-s7h" firstAttribute="top" secondItem="vaa-LT-cn4" secondAttribute="top" constant="9" id="hcZ-ER-PxD"/>
-                            <constraint firstItem="4kW-3C-oyB" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="mnV-IM-adr"/>
-                            <constraint firstItem="VOY-vu-s7h" firstAttribute="top" secondItem="vaa-LT-cn4" secondAttribute="top" constant="9" id="nzu-b3-dn0"/>
-                            <constraint firstItem="VOY-vu-s7h" firstAttribute="width" secondItem="vaa-LT-cn4" secondAttribute="width" multiplier="0.178744" id="ocM-Df-TeV"/>
-                            <constraint firstItem="V7F-l5-AFE" firstAttribute="centerX" secondItem="vaa-LT-cn4" secondAttribute="centerX" id="u1g-Mb-nTp"/>
+                            <constraint firstItem="4kW-3C-oyB" firstAttribute="trailing" secondItem="vaa-LT-cn4" secondAttribute="trailing" id="Jeb-gx-YK9"/>
+                            <constraint firstItem="4kW-3C-oyB" firstAttribute="top" secondItem="vaa-LT-cn4" secondAttribute="top" id="T4i-QC-5Ci"/>
+                            <constraint firstItem="4kW-3C-oyB" firstAttribute="bottom" secondItem="vaa-LT-cn4" secondAttribute="bottom" id="pJG-pZ-yKl"/>
+                            <constraint firstItem="4kW-3C-oyB" firstAttribute="leading" secondItem="vaa-LT-cn4" secondAttribute="leading" id="zfT-pX-vLc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xdA-bJ-EZH"/>
                     <connections>
-                        <outlet property="bottomLabel" destination="V7F-l5-AFE" id="mgp-UR-RmW"/>
                         <outlet property="memedImage" destination="4kW-3C-oyB" id="MkL-8O-O4C"/>
-                        <outlet property="topLabel" destination="VOY-vu-s7h" id="Wnb-Jn-Rim"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ov1-J1-m8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
